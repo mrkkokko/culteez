@@ -1,0 +1,387 @@
+
+/* ¤ ¤ ¤ ¤ ¤ // ¤ ¤ ¤ ¤ ¤ // k o k k o // u t f - 8 // ¤ ¤ ¤ ¤ ¤ // ¤ ¤ ¤ ¤ ¤ //
+// ¤ ¤ ¤ ¤ ¤ // ¤ ¤ ¤ ¤ ¤ // k o k k o // u t f - 8 // ¤ ¤ ¤ ¤ ¤ // ¤ ¤ ¤ ¤ ¤ //
+// ¤ ¤ ¤ ¤ ¤ // ¤ ¤ ¤ ¤ ¤ // k o k k o // u t f - 8 // ¤ ¤ ¤ ¤ ¤ // ¤ ¤ ¤ ¤ ¤ */
+
+/* System Settings */
+
+#computer {
+	/* Fonts */
+	font-family: "Courier New", "Verdana";
+	font-size: 12pt;
+	color: #eaeaea;
+	/* Flexbox */
+	display: flex;
+	flex-flow: column nowrap;
+	align-content: stretch;
+	justify-content: flex-start;
+}
+
+/* System Settings */
+
+/* Wallpapering */
+
+#wallppr {
+	/* Color */
+	background: #222222;
+}
+
+/* Wallpapering */
+
+/* ### ### ### */
+
+/* Desktop Theming */
+
+#desktop {
+	/* Flexbox */
+	order: 1;
+	flex: 2 0 auto;
+	/* Grid */
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 6rem);
+	grid-template-rows: repeat(auto-fit, 7rem);
+	grid-auto-flow: column;
+	align-items: start;
+}
+
+/* Desktop Theming */
+
+/* Menu Theming */
+
+#desktop > .menu {
+	/* Position */
+	position: absolute;
+	z-index: 50;
+	top: 0;
+	left: 0;
+	/* Flexbox */
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	/* Box */
+	padding: 3px 1px;
+	border: 1px #eaeaeaaa solid;
+	/* Size */
+	min-width: 10rem;
+	min-height: 1rem;
+	/* Color */
+	background: #444;
+	box-shadow: .3rem .3rem rgb(85, 85, 85, .3);
+}
+.menu.empty:after {
+	/* Fonts */
+	font-family: "Courier New", "Verdana";
+	font-size: 11pt;
+	text-align: left;
+	/* Content */
+	content: 'No Actions';
+	/* Box */
+	padding: 3px .5rem;
+	border: 0;
+	margin: 0 1px;
+	/* Color */
+	color: #eaeaeaaa;
+}
+
+/* --- Actions */
+
+.menu > button.action {
+	/* Fonts */
+	font-family: "Courier New", "Verdana";
+	font-size: 11pt;
+	text-align: left;
+	color: #eaeaea;
+	/* Flexbox */
+	flex: 1 0;
+	/* Box */
+	padding: 3px .5rem;
+	border: 0;
+	margin: 0 1px;
+	/* Size */
+	min-width: 10rem;
+	min-height: 1rem;
+	/* Color */
+	background: #FFF0;
+}
+.menu > button.action:hover {
+	/* Color */
+	background: #FFF2;
+}
+.menu > hr {
+	/* Box */
+	border: 0;
+	margin: .2rem auto;
+	/* Size */
+	width: 90%;
+	height: 1px;
+	/* Color */
+	background: #eaeaea;
+}
+
+/* Menu Theming */
+
+/* Window Theming */
+
+#desktop > .window {
+	/* Position */
+	position: absolute;
+	z-index: 20;
+	top: 2rem;
+	left: 3rem;
+	/* Flexbox */
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	/* Settings */
+	cursor: default;
+	overflow: visible;
+	/* Size */
+	min-width: 8rem;
+	min-height: 4rem;
+	width: 20%;
+	height: 30%;
+	/* Color */
+	box-shadow: .3rem .3rem rgb(85, 85, 85, .3);
+}
+
+/* --- Minimization */
+
+.window.minimized {
+	/* Size */
+	height: 2rem !important;
+	min-height: 2rem !important;
+}
+.minimized > .mainer,
+.minimized > .footer {
+	/* Hiding */
+	display: none !important;
+}
+
+/* --- Closing */
+
+.window.closed {
+	/* Hiding */
+	display: none !important;
+}
+
+/* --- Fronting */
+
+.window.frontmost {
+	/* Color */
+	border: 1px solid rgb(234, 234, 234, .7) !important;
+}
+
+/* --- Header */
+
+.window > .header {
+	/* Flexbox */
+	order: 1;
+	flex: 0 0 auto;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	text-align: center;
+	/* Size */
+	width: 100%;
+	height: 2rem;
+	/* Color */
+	background: #444444;
+}
+.header > p.title {
+	/* Flexbox */
+	order: 1;
+	flex: 2 1 auto;
+	/* Settings */
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: left;
+	/* Box */
+	margin: 0 1rem;
+}
+.header > p.minimizer {
+	/* Flexbox */
+	order: 2;
+	flex: 0 0 auto;
+	/* Box */
+	margin: 0 .5rem;
+}
+p.minimizer:before {
+	/* Symbol */
+	content: "_";
+}
+.header > p.killer {
+	/* Flexbox */
+	order: 3;
+	flex: 0 0 auto;
+	/* Box */
+	margin: 0 .5rem;
+}
+p.killer:before {
+	/* Symbol */
+	content: "X";
+}
+
+/* --- Mainer */
+
+.window > .mainer {
+	/* Flexbox */
+	order: 2;
+	flex: 1 1 auto;
+	/* Settings */
+	overflow: hidden;
+	/* Color */
+	background: #333;
+	/* Size */
+	width: 100%;
+	height: 100%;
+}
+
+/* --- Footer */
+
+.window > .footer {
+	/* Flexbox */
+	order: 3;
+	flex: 0 0 auto;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-end;
+	align-items: flex-end;
+	/* Size */
+	width: 100%;
+	height: 1rem;
+	/* Color */
+	background: #444444;
+}
+.footer > p.resizer {
+	/* Font */
+	font-size: 10pt;
+	/* Settings */
+	cursor: se-resize;
+}
+p.resizer:before {
+	/* Symbol */
+	content: "#";
+}
+
+/* Window Theming */
+
+/* Folder Theming */
+
+.content.folder {
+	/* Grid */
+	display: grid !important;
+	grid-template: repeat(auto-fit, 7rem) / repeat(auto-fit, 6rem);
+	grid-auto-flow: row;
+	grid-auto-columns: 6rem;
+	grid-auto-rows: 7rem;
+	align-items: start;
+	/* Settings */
+	overflow: auto;
+	/* Size */
+	width: 100%;
+	height: 100%;
+}
+
+/* Folder Theming */
+
+/* File Theming */
+
+#desktop > .file,
+.folder > .file {
+	/* Flexbox */
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	/* Settings */
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: center;
+	word-break: break-word;
+	/* Box */
+	margin: .2rem;
+}
+#desktop > .file:hover,
+.folder > .file:hover {
+	/* Position */
+	z-index: 10;
+	/* Settings */
+	overflow: visible;
+	white-space: normal;
+	text-overflow: normal;
+}
+.file > img {
+	/* Flexbox */
+	order: 1;
+	flex: 0 0 auto;
+	/* Settings */
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	/* Size */
+	width: 5rem;
+	height: 5rem;
+}
+.file > p {
+	/* Flexbox */
+	order: 2;
+	flex: 1 0 auto;
+	/* Size */
+	width: calc(90%);
+	/* Color */
+	background: rgb(34, 34, 34, .9);
+}
+
+/* --- Dragging */
+
+.file.dragging {
+	/* Position */
+	position: absolute;
+	z-index: 30;
+	/* Settings */
+	pointer-events: none;
+	/* Color */
+	opacity: .5;
+}
+
+/* File Theming */
+
+/* ### ### ### */
+
+/* Taskbar Theming */
+
+#taskbar {
+	/* Flexbox */
+	order: 2;
+	/* Grid */
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 6rem);
+	grid-template-rows: 100%;
+	grid-auto-flow: row;
+	/* Color */
+	background: #111111;
+	/* Size */
+	width: 100%;
+	height: 4rem;
+}
+
+/* Taskbar Theming */
+
+/* Logo Theming */
+
+img#logo {
+	/* Position */
+	position: absolute;
+	z-index: -5;
+	top: 50%;
+	left: 50%;
+	/* Settings */
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+}
+
+/* Logo Theming */

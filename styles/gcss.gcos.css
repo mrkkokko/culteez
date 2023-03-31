@@ -1,0 +1,44 @@
+
+/* ¤ ¤ ¤ ¤ ¤ // ¤ ¤ ¤ ¤ ¤ // k o k k o // u t f - 8 // ¤ ¤ ¤ ¤ ¤ // ¤ ¤ ¤ ¤ ¤ //
+// ¤ ¤ ¤ ¤ ¤ // ¤ ¤ ¤ ¤ ¤ // k o k k o // u t f - 8 // ¤ ¤ ¤ ¤ ¤ // ¤ ¤ ¤ ¤ ¤ //
+// ¤ ¤ ¤ ¤ ¤ // ¤ ¤ ¤ ¤ ¤ // k o k k o // u t f - 8 // ¤ ¤ ¤ ¤ ¤ // ¤ ¤ ¤ ¤ ¤ */
+
+@import "gcss.gcos.theme.css";
+@import "gcss.gcos.content.css";
+
+/* ### ### ### */
+
+* {
+	overflow: hidden;
+	user-select: none;
+	margin: 0;
+}
+
+/* ### ### ### */
+
+#computer {
+	width: 100%;
+	height: 100%;
+}
+
+#wallppr {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -10;
+	
+	width: 100%;
+	height: 100%;
+}
+
+#desktop {}
+
+.file.dragging {
+	pointer-events: none;
+}
+
+#taskbar {
+	z-index: 90;
+}
+
+/* ### ### ### */

@@ -1,0 +1,90 @@
+
+/* ¤ ¤ ¤ ¤ ¤ // ¤ ¤ ¤ ¤ ¤ // k o k k o // u t f - 8 // ¤ ¤ ¤ ¤ ¤ // ¤ ¤ ¤ ¤ ¤ //
+// ¤ ¤ ¤ ¤ ¤ // ¤ ¤ ¤ ¤ ¤ // k o k k o // u t f - 8 // ¤ ¤ ¤ ¤ ¤ // ¤ ¤ ¤ ¤ ¤ //
+// ¤ ¤ ¤ ¤ ¤ // ¤ ¤ ¤ ¤ ¤ // k o k k o // u t f - 8 // ¤ ¤ ¤ ¤ ¤ // ¤ ¤ ¤ ¤ ¤ */
+
+/*
+ *	reserved class words:
+ *	.gc	:	for activating gamechart style
+ *	.not	:	for disabling elements
+ */
+
+/* ### ### ### */
+
+html.gc, .gc body {
+	/* Box */
+	margin: 0;
+	border: 0;
+	padding: 0;
+	/* Settings */
+	overflow: hidden;
+	transition-duration: 0.2s;
+	/* Size */
+	height: 100%;
+	width: 100%;
+}
+
+.gc body {
+	/* Font */
+	font-family: "Courier New";
+	font-size: 12pt;
+	/* Color */
+	background: #222;
+	color: #eaeaea;
+}
+
+/* LINKS */
+.gc a {
+	/* Color */
+	background: rgba(255,255,255,.1);
+	color: #eaeaea;
+	text-decoration: none;
+}
+.gc a:hover {
+	/* Color */
+	background: rgba(255,255,255,.3);
+	text-decoration: underline;
+}
+.gc a:active {
+	/* Color */
+	background: #fff;
+	color: #111;
+}
+
+.gc * {
+	/* Settings */
+	-webkit-user-drag: none;
+	user-select: none;
+}
+
+.gc .not {
+	/* Hiding */
+	display: none !important;
+}
+
+.gc ::-webkit-scrollbar {
+	/* Size */
+	width: .7rem;
+}
+.gc ::-webkit-scrollbar-track {
+	/* Color */
+	background: none;
+}
+.gc ::-webkit-scrollbar-thumb {
+	/* Color */
+	background: #333;
+}
+.gc ::-webkit-scrollbar-thumb:hover {
+	/* Color */
+	background: #444;
+}
+
+/* ### ### ### */
+
+.gc .red {background: red}
+.gc .green {background: green}
+.gc .blue {background: blue}
+.gc .yellow {background: yellow}
+.gc .white {background: white}
+.gc .violet {background: violet}
+.gc .pink {background: pink}
